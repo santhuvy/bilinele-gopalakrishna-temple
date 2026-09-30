@@ -1,0 +1,62 @@
+---
+import Base from "../layouts/Base.astro";
+import { messages } from "../i18n/messages";
+
+const photos = [
+  { src: "/gallery/temple-front.png", key: "gallery.front", span: "s4 wide" },
+  { src: "/gallery/temple-courtyard.png", key: "gallery.courtyard", span: "s2" },
+  { src: "/gallery/temple-side.png", key: "gallery.exterior", span: "s2" },
+  { src: "/gopalakrishna.png", key: "gallery.deity", span: "s2" },
+  { src: "/gallery/garbhagudi.png", key: "gallery.garbha", span: "s2" },
+  { src: "/gallery/temple-close.png", key: "gallery.close", span: "s3" },
+  { src: "/gallery/theertha-mantapa.png", key: "gallery.mantapa", span: "s3 wide" },
+  { src: "/gallery/ganapathi.png", key: "gallery.ganapathi", span: "s2" },
+  { src: "/gallery/shasthara.png", key: "gallery.shasthara", span: "s2" },
+  { src: "/gallery/muni.png", key: "gallery.muni", span: "s2" },
+  { src: "/gallery/pond.png", key: "gallery.pond", span: "s4 wide" },
+  { src: "/gallery/temple-back.png", key: "gallery.back", span: "s2" },
+];
+---
+
+<Base title="Gallery" titleKey="meta.gallery" description="Photographs of Sri Gopalakrishna Temple, Bilinele.">
+  <section class="wrap page">
+    <header class="page-intro">
+      <p class="kicker" data-i18n="nav.gallery">Gallery</p>
+      <h1 data-i18n="gallery.title">Photo gallery</h1>
+    </header>
+    <div class="masonry">
+      {photos.map((photo) => (
+        <figure class={photo.span}>
+          <button class="shot" type="button" data-lightbox-open aria-label={messages.en[photo.key]} data-i18n={photo.key} data-i18n-attr="aria-label">
+            <img src={photo.src} alt={messages.en[photo.key]} data-i18n={photo.key} data-i18n-attr="alt" loading="lazy" />
+          </button>
+          <figcaption data-i18n={photo.key}>{messages.en[photo.key]}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+  <dialog class="lightbox" data-lightbox>
+    <button class="lightbox-close" type="button" data-lightbox-close data-i18n="gallery.closeBtn">Close</button>
+    <img alt="" />
+    <p></p>
+  </dialog>
+  <script>
+    const dialog = document.querySelector<HTMLDialogElement>("[data-lightbox]");
+    const image = dialog?.querySelector("img");
+    const caption = dialog?.querySelector("p");
+    document.querySelectorAll<HTMLButtonElement>("[data-lightbox-open]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const source = button.querySelector("img");
+        if (!dialog || !image || !source) return;
+        image.src = source.src;
+        image.alt = source.alt;
+        if (caption) caption.textContent = button.parentElement?.querySelector("figcaption")?.textContent ?? source.alt;
+        dialog.showModal();
+      });
+    });
+    dialog?.querySelector("[data-lightbox-close]")?.addEventListener("click", () => dialog.close());
+    dialog?.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  </script>
+</Base>

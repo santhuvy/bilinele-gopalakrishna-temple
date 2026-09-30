@@ -1,0 +1,36 @@
+---
+import { nav, site } from "../data/site";
+import { templePhone, templePhoneHref } from "../data/sevas";
+
+const labels: Record<string, string> = {
+  "/": "nav.home",
+  "/about/": "nav.temple",
+  "/worship/": "nav.worship",
+  "/festivals/": "nav.festivals",
+  "/gallery/": "nav.gallery",
+  "/visit/": "nav.visit",
+};
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-kicker" data-i18n="hero.eyebrow">Sri Gopalakrishna Temple</p>
+      <h2 data-i18n="footer.name">{site.name}</h2>
+      <p data-i18n="footer.address">{site.address.lines.join(", ")}</p>
+      <p><a href={templePhoneHref}>{templePhone}</a></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      {
+        nav.map((item) => (
+          <a href={item.href} data-i18n={labels[item.href]}>{item.label}</a>
+        ))
+      }
+    </nav>
+    <div>
+      <p><a href={site.mapHref} target="_blank" rel="noreferrer" data-i18n="visit.maps">Open in Google Maps</a></p>
+      <p><a href="https://www.youtube.com/watch?v=Lu7GpGwaROw" target="_blank" rel="noreferrer" data-i18n="about.watch">Watch the temple film</a></p>
+      <p class="domain">{site.domain}</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,38 @@
+---
+import { nav, site } from "../data/site";
+
+const path = Astro.url.pathname;
+const labels: Record<string, string> = {
+  "/": "nav.home",
+  "/about/": "nav.temple",
+  "/worship/": "nav.worship",
+  "/festivals/": "nav.festivals",
+  "/gallery/": "nav.gallery",
+  "/visit/": "nav.visit",
+};
+---
+
+<header class="site-header" data-header>
+  <div class="header-bar">
+    <a class="site-name" href="/" data-i18n="footer.name">{site.name}</a>
+    <nav id="site-nav" class="nav" data-nav>
+      {
+        nav.map((item) => (
+          <a href={item.href} data-i18n={labels[item.href]} aria-current={path === item.href ? "page" : undefined}>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="top-tools">
+      <div class="lang" role="group" data-i18n="lang.label" data-i18n-attr="aria-label" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-set-lang="kn" aria-pressed="false">ಕನ್ನಡ</button>
+      </div>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        <span class="sr-only" data-i18n="nav.menu">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>

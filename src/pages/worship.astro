@@ -1,0 +1,86 @@
+---
+import Base from "../layouts/Base.astro";
+import { sevas, templePhone, templePhoneHref } from "../data/sevas";
+---
+
+<Base title="Seva List" titleKey="meta.worship" description="Seva list of Sri Gopalakrishna Temple, Bilinele, with amounts from the temple board. Phone 08251-262299.">
+  <article class="wrap page">
+    <header class="page-intro">
+      <p class="eyebrow kicker" data-i18n="seva.phoneLabel">Temple phone</p>
+      <h1 data-i18n="nav.worship">Seva</h1>
+    </header>
+    <p><a class="phone" href={templePhoneHref}>{templePhone}</a></p>
+    <div class="seva-wrap">
+      <table class="seva-table">
+        <thead>
+          <tr>
+            <th data-i18n="seva.colNo">#</th>
+            <th data-i18n="seva.colName">Seva name</th>
+            <th class="amt" data-i18n="seva.colAmount">Amount (Rs)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            sevas.map((seva, index) => (
+              <tr>
+                <td>{index + 1}</td>
+                <td>
+                  <span class="kn-name">{seva.kn}</span>
+                  <span class="en-name">{seva.en}</span>
+                </td>
+                <td class="amt">
+                  {seva.amount ? seva.amount : <span data-i18n="seva.confirm">Confirm at temple</span>}
+                  {seva.note === "struck" ? " *" : ""}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="seva-note" data-i18n="seva.note">
+      Amounts are in rupees, as printed on the temple seva board. Sevas marked for seven days’ notice should be arranged ahead. A few figures at the bottom of the board are worn; please confirm those at the temple. The phone on the board is 08251-262299.
+    </p>
+    <p class="seva-note">* <span data-i18n="seva.struck">This figure is struck through on the board.</span></p>
+    <p data-i18n="worship.intro">
+      Daily worship and traditional rituals are performed according to the temple’s customary practices. Devotees are welcome during the designated hours.
+    </p>
+
+    <div class="facts">
+      <article class="fact">
+        <span data-i18n="pooja.title">Pooja times</span>
+        <p><span data-i18n="pooja.morningLabel">Morning</span> <strong data-i18n="pooja.morning">8:00–8:30</strong></p>
+        <p><span data-i18n="pooja.noonLabel">Afternoon</span> <strong data-i18n="pooja.noon">12:00–12:30</strong></p>
+        <p><span data-i18n="pooja.eveningLabel">Evening</span> <strong data-i18n="pooja.evening">7:00–7:15</strong></p>
+      </article>
+      <article class="fact">
+        <span data-i18n="fact.wednesday">Wednesday</span>
+        <strong data-i18n="fact.wednesdayDetail">Food service until noon</strong>
+      </article>
+    </div>
+    <p data-i18n="pooja.note">
+      These are the daily pooja times on the temple board. Festival days may follow a special schedule.
+    </p>
+
+    <div class="section-block">
+      <h2 data-i18n="worship.goTitle">Gau Puja — Sacred Cow Worship</h2>
+      <p data-i18n="worship.go1">
+        Go Seva, service to cows, is one of the important devotional practices of the temple. Devotees offer it while praying for the fulfilment of wishes and for blessings on family, agriculture, cattle, livelihood, and well-being.
+      </p>
+      <p data-i18n="worship.go2">
+        It is also a cherished tradition to return and perform seva after prayers have been fulfilled, or after receiving blessings in the form of employment, prosperity, or relief from difficulties.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h2 data-i18n="worship.wednesdayTitle">Bhajana and Annadana</h2>
+      <p data-i18n="worship.wednesday">
+        Bhajana seva is conducted every Wednesday. On Wednesdays, Annadana is offered to devotees until noon. Serving devotees and the community is treated as an expression of devotion.
+      </p>
+    </div>
+
+    <div class="actions">
+      <a class="button" href="/festivals/" data-i18n="nav.festivals">Festivals</a>
+    </div>
+  </article>
+</Base>

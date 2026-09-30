@@ -1,0 +1,135 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+---
+
+<Base title={site.name} titleKey="meta.home" description={site.description} overlay>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="hero-kicker" data-i18n="hero.eyebrow">Sri Gopalakrishna Temple</p>
+      <h1 data-i18n="hero.title">Bilinele</h1>
+      <p class="hero-kn" data-i18n="home.subtitle">ಶ್ರೀ ಗೋಪಾಲಕೃಷ್ಣ ದೇವಸ್ಥಾನ, ಬಿಳಿನೆಲೆ</p>
+      <p class="hero-lede" data-i18n="hero.lede">A sacred abode of Sri Bala Gopala, rooted in devotion, tradition and spiritual heritage.</p>
+      <div class="hero-actions">
+        <a class="button" href="#kshetra" data-i18n="hero.explore">Explore the Temple</a>
+        <a class="button-ghost" href="/visit/" data-i18n="hero.visit">Plan Your Visit</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="/gallery/temple-front.png" alt="The front hall." data-i18n="gallery.front" data-i18n-attr="alt" width="333" height="407" fetchpriority="high" />
+    </div>
+  </section>
+
+  <section class="intro wrap" id="kshetra">
+    <div class="intro-grid">
+      <figure class="intro-media">
+        <img src="/gallery/temple-courtyard.png" alt="The front courtyard." data-i18n="gallery.courtyard" data-i18n-attr="alt" width="333" height="407" loading="lazy" />
+        <figcaption data-i18n="gallery.courtyard">The front courtyard.</figcaption>
+      </figure>
+      <div class="intro-copy">
+        <p class="kicker" data-i18n="intro.kicker">The Sacred Kshetra</p>
+        <h2 data-i18n="intro.title">A Place of Faith, Devotion &amp; Seva</h2>
+        <p data-i18n="home.p1">
+          Sri Gopalakrishna Temple, Bilinele, is a revered sacred kshetra nestled amidst the serene and beautiful surroundings of Bilinele village in Kadaba Taluk, Dakshina Kannada, Karnataka. Dedicated to Sri Bala Gopala, the temple is a cherished centre of faith and devotion, drawing devotees who seek the blessings of Lord Gopalakrishna for peace, prosperity, family well-being and fulfilment of their prayers.
+        </p>
+        <a class="text-link" href="/about/" data-i18n="intro.more">Discover Our History</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="essay wrap narrow">
+    <p data-i18n="home.p2">
+      According to the Sthalapurana and local tradition, this sacred land has been associated with sages, spiritual learning and penance since ancient times. The stream flowing beside the temple, traditionally known as “Shukla Tirtha” and now called the Bilinele Stream, is an integral part of the spiritual heritage of this kshetra. The traditions of this sacred place have been preserved and passed down through generations.
+    </p>
+    <p data-i18n="home.p3">
+      The kshetra holds a special place in the hearts of devotees for Go Seva and prayers associated with the well-being of cattle, agriculture and family life. Devotees also seek the blessings of Sri Gopalakrishna for Santana Prapti (blessings of children) and observe the sacred Santana Gopalakrishna Vrata. Many devotees return to the temple to offer seva in gratitude after their prayers and vows are fulfilled.
+    </p>
+    <p data-i18n="home.p4">
+      The temple complex is also home to the revered shrines of Sri Mahaganapati, Sri Shasthara and Sri Kamalamba Devi. The temple comes alive with devotional celebrations throughout the year, including Sri Krishna Janmashtami, Sri Ganesha celebrations, Navaratri and Dhanurmasa. Special worship, Homa, Mantra Japa, Bhajans and Annadana form an important part of the temple's spiritual and community traditions.
+    </p>
+    <p data-i18n="home.p5">
+      Sri Gopalakrishna Temple, Bilinele, continues to preserve a living tradition of devotion, faith and seva. Surrounded by the tranquil beauty of Bilinele, this sacred kshetra welcomes devotees from near and far to seek the divine grace of Sri Bala Gopala and experience the spiritual heritage of this blessed land.
+    </p>
+  </section>
+
+  <section class="deity">
+    <div class="wrap deity-grid">
+      <figure class="deity-media">
+        <img src="/gopalakrishna.png" alt="Sri Gopalakrishna, the presiding deity, worshipped as Bala Gopala." data-i18n="gallery.deity" data-i18n-attr="alt" loading="lazy" />
+      </figure>
+      <div class="deity-copy">
+        <p class="kicker" data-i18n="deity.line">The presiding deity of the sacred kshetra</p>
+        <h2 data-i18n="deity.title">Sri Bala Gopala</h2>
+        <p data-i18n="know.bala">Sri Gopalakrishna is traditionally worshipped here in the charming form of Bala Gopala holding butter in both hands.</p>
+        <p data-i18n="about.deityForm">
+          Sri Bala Gopala represents the child form of Lord Krishna and is lovingly worshipped by devotees seeking divine grace, protection, happiness and prosperity. The devotion to Bala Gopala forms the heart of the spiritual traditions of this kshetra.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stories wrap">
+    <h2 data-i18n="know.title">Did You Know?</h2>
+    <div class="know-grid">
+      <article class="know-card">
+        <span class="know-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c2 3 2 5 0 8 3-1 6 1 6 4a6 6 0 1 1-12 0c0-4 3-6 6-12z"/></svg></span>
+        <h3 data-i18n="know.tirthaTitle">Shukla Tirtha</h3>
+        <p data-i18n="know.tirtha">The stream flowing beside the temple was traditionally known as Shukla Tirtha.</p>
+      </article>
+      <article class="know-card">
+        <span class="know-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 19V9l6-4 6 4v10"/><path d="M10 19v-5h4v5"/></svg></span>
+        <h3 data-i18n="know.guruTitle">Gurukula Tradition</h3>
+        <p data-i18n="know.guru">A hermitage was established here, and the ascetic is believed to have imparted spiritual knowledge to his disciples through a traditional Gurukula.</p>
+      </article>
+      <article class="know-card">
+        <span class="know-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M4.9 6.5l2.8 2.8M16.3 14.7l2.8 2.8M3 12h4M17 12h4M4.9 17.5l2.8-2.8M16.3 9.3l2.8-2.8"/><circle cx="12" cy="12" r="3.2"/></svg></span>
+        <h3 data-i18n="know.lingaTitle">The Sacred Jyotirlinga</h3>
+        <p data-i18n="know.linga">The Sthalapurana recounts a tradition of sages receiving and worshipping a sacred Jyotirlinga at Bilinele.</p>
+      </article>
+      <article class="know-card">
+        <span class="know-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 16c1.5-4 4-6 7-6s5.5 2 7 6"/><path d="M8 16c.4-1.6 1.5-2.6 4-2.6S15.6 14.4 16 16"/><circle cx="8" cy="10" r="0.8"/><path d="M4 19h16"/></svg></span>
+        <h3 data-i18n="know.goTitle">Go Durita Nivarana</h3>
+        <p data-i18n="know.go">The kshetra has a longstanding devotional tradition associated with prayers for the well-being of cattle and agriculture.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-media">
+      <img src="/gallery/pond.png" alt="The temple pond." data-i18n="gallery.pond" data-i18n-attr="alt" loading="lazy" />
+    </div>
+    <div class="band-shade"></div>
+    <div class="band-copy wrap">
+      <span class="ornament" aria-hidden="true"></span>
+      <h2 data-i18n="goseva.bandTitle">Gau Puja — Sacred Cow Worship</h2>
+      <p data-i18n="goseva.bandLine">An offering of devotion and gratitude</p>
+      <a class="text-link light" href="/worship/" data-i18n="goseva.more">Learn More</a>
+    </div>
+  </section>
+
+  <section class="visit-strip wrap">
+    <p class="kicker" data-i18n="visit.plan">Plan your visit</p>
+    <div class="facts">
+      <article class="fact">
+        <span data-i18n="pooja.title">Pooja times</span>
+        <p><span data-i18n="pooja.morningLabel">Morning</span> <strong data-i18n="pooja.morning">8:00–8:30</strong></p>
+        <p><span data-i18n="pooja.noonLabel">Afternoon</span> <strong data-i18n="pooja.noon">12:00–12:30</strong></p>
+        <p><span data-i18n="pooja.eveningLabel">Evening</span> <strong data-i18n="pooja.evening">7:00–7:15</strong></p>
+      </article>
+      <article class="fact">
+        <span data-i18n="fact.wednesday">Wednesday</span>
+        <strong data-i18n="fact.wednesdayValue">Bhajana and Annadana</strong>
+        <p data-i18n="fact.wednesdayDetail">Food service until noon</p>
+      </article>
+      <article class="fact">
+        <span data-i18n="fact.place">Place</span>
+        <strong data-i18n="fact.placeValue">Bilinele, Kadaba taluk</strong>
+        <p data-i18n="fact.placeDetail">Dakshina Kannada, Karnataka</p>
+      </article>
+    </div>
+    <div class="actions">
+      <a class="button" href={site.mapHref} target="_blank" rel="noreferrer" data-i18n="visit.directions">Get Directions</a>
+      <a class="button-ghost" href="/visit/" data-i18n="nav.visit">Contact</a>
+    </div>
+  </section>
+</Base>

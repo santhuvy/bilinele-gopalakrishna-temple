@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Festivals" titleKey="meta.festivals" description="Festivals at Sri Gopalakrishna Temple, Bilinele: Ganesha, Janmashtami, Navaratri, Dhanurmasa, homa, and mantra japa.">
+  <article class="page">
+    <header class="page-intro wrap">
+      <p class="kicker" data-i18n="nav.festivals">Festivals</p>
+      <h1 data-i18n="worship.festTitle">Festivals and observances</h1>
+      <p class="narrow" data-i18n="worship.festIntro">Important occasions through the year include:</p>
+    </header>
+    <div class="festival-grid wrap">
+      <article class="festival-card">
+        <figure>
+          <img src="/gallery/ganapathi.png" alt="Sri Mahaganapati." data-i18n="gallery.ganapathi" data-i18n-attr="alt" loading="lazy" />
+        </figure>
+        <h2 data-i18n="worship.f1">Sri Ganesha Festival</h2>
+      </article>
+      <article class="festival-card">
+        <figure>
+          <img src="/gopalakrishna.png" alt="Sri Gopalakrishna, the presiding deity, worshipped as Bala Gopala." data-i18n="gallery.deity" data-i18n-attr="alt" loading="lazy" />
+        </figure>
+        <h2 data-i18n="worship.f2">Sri Krishna Janmashtami</h2>
+      </article>
+      <article class="festival-card text-only">
+        <span class="ornament" aria-hidden="true"></span>
+        <h2 data-i18n="worship.f3">Navaratri</h2>
+        <p data-i18n="about.navaratri">
+          The shrine of Goddess Kamalamba holds particular significance during Navaratri. Special worship is performed for nine days during the festival.
+        </p>
+      </article>
+      <article class="festival-card text-only">
+        <span class="ornament" aria-hidden="true"></span>
+        <h2 data-i18n="worship.f4">Dhanurmasa celebrations</h2>
+        <p data-i18n="worship.dhanur">
+          During Dhanurmasa, special observances are conducted over an extended period. Sri Gopalakrishna Homa and the chanting of Sri Gopalakrishna mantras are an important part of these celebrations. Devotees may also take part in seva during this period.
+        </p>
+        <p><span data-i18n="worship.f5">Sri Gopalakrishna Homa</span> · <span data-i18n="worship.f6">Sri Gopalakrishna Mantra Japa</span></p>
+      </article>
+    </div>
+  </article>
+</Base>
