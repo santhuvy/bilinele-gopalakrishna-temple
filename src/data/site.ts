@@ -1,6 +1,6 @@
 export const site = {
-  domain: "bilinelegopalakrishna.in",
-  url: "https://bilinelegopalakrishna.in",
+  domain: "bilinelegopalakrishnatemple.in",
+  url: "https://bilinelegopalakrishnatemple.in",
   name: "Sri Gopalakrishna Temple",
   nameKannada: "ಶ್ರೀ ಗೋಪಾಲಕೃಷ್ಣ ದೇವಸ್ಥಾನ",
   place: "Bilinele",
