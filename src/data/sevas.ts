@@ -35,7 +35,6 @@ export const sevas: Seva[] = [
   { kn: "ಪವನಾಭಿಷೇಕ ಸಹಸ್ರಾರ್ಚನೆ (7 ದಿನ ಮುಂಚಿತವಾಗಿ ತಿಳಿಸಿ)", en: "Pavana abhisheka sahasra archane (inform 7 days ahead)", amount: "50" },
   { kn: "ಅಲಂಕಾರ ಸೇವೆ (ಹಣ ತರಬೇಕು)", en: "Alankara seva (bring the offering)", amount: "" },
   { kn: "ಸಹಸ್ರಾರ್ಚನೆ", en: "Sahasra archane", amount: "" },
-  { kn: "ಇತರೆ", en: "Other", amount: "" },
 ];
 
 export const templePhone = "08251-262299";
