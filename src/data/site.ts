@@ -10,7 +10,7 @@ export const site = {
   address: {
     lines: [
       "Sri Gopalakrishna Temple, Bilinele",
-      "Nettani post, Kadaba taluk",
+      "Nettana post, Kadaba taluk",
       "Dakshina Kannada, Karnataka",
     ],
   },
