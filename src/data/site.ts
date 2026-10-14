@@ -1,8 +1,8 @@
 export const site = {
   domain: "bilinelegopalakrishnatemple.in",
   url: "https://bilinelegopalakrishnatemple.in",
-  name: "Sri Gopalakrishna Temple",
-  nameKannada: "ಶ್ರೀ ಗೋಪಾಲಕೃಷ್ಣ ದೇವಸ್ಥಾನ",
+  name: "Sri Gopalakrishna Temple, Bilinele",
+  nameKannada: "ಶ್ರೀ ಗೋಪಾಲಕೃಷ್ಣ ದೇವಸ್ಥಾನ, ಬಿಳಿನೆಲೆ",
   place: "Bilinele",
   placeKannada: "ಬಿಳಿನೆಲೆ",
   description:
