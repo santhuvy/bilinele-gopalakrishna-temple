@@ -3,20 +3,44 @@ import Base from "../layouts/Base.astro";
 import { messages } from "../i18n/messages";
 
 const photos = [
-  { src: "/gallery/temple-front.png", key: "gallery.front", span: "s4 wide" },
-  { src: "/gallery/temple-courtyard.png", key: "gallery.courtyard", span: "s2" },
-  { src: "/gallery/temple-side.png", key: "gallery.exterior", span: "s2" },
-  { src: "/gopalakrishna.png", key: "gallery.deity", span: "s2" },
-  { src: "/gallery/garbhagudi.png", key: "gallery.garbha", span: "s2" },
-  { src: "/gallery/temple-close.png", key: "gallery.close", span: "s3" },
-  { src: "/gallery/theertha-mantapa.png", key: "gallery.mantapa", span: "s3 wide" },
-  { src: "/gallery/ganapathi.png", key: "gallery.ganapathi", span: "s2" },
-  { src: "/gallery/shasthara.png", key: "gallery.shasthara", span: "s2" },
-  { src: "/gallery/muni.png", key: "gallery.muni", span: "s2" },
-  { src: "/gallery/pond.png", key: "gallery.pond", span: "s4 wide" },
-  { src: "/gallery/temple-back.png", key: "gallery.back", span: "s2" },
-  { src: "/gallery/deity_image.png", key: "gallery.deityClose", span: "s2" },
-  { src: "/gallery/pond_at_night.png", key: "gallery.pondNight", span: "s2" },
+  // Best shots first
+  { src: "/gallery/wood_work3.png", key: "gallery.woodwork3" },
+  { src: "/gallery/Temple_Front_Enhanced.png", key: "gallery.front" },
+  { src: "/gallery/Front_view.png", key: "gallery.frontView" },
+  { src: "/gallery/Image1.png", key: "gallery.duskView" },
+  { src: "/gallery/wood_work.png", key: "gallery.woodwork" },
+  { src: "/gallery/wood_work2.png", key: "gallery.woodwork2" },
+  { src: "/gallery/Image3.png", key: "gallery.mantapaView" },
+
+  // Exterior and courtyard
+  { src: "/gallery/temple-courtyard.png", key: "gallery.courtyard" },
+  { src: "/gallery/temple-side.png", key: "gallery.exterior" },
+  { src: "/gallery/Entrance.png", key: "gallery.entranceView" },
+  { src: "/gallery/Front_View_2.png", key: "gallery.tulabhara" },
+  { src: "/gallery/Front_View_3.png", key: "gallery.decorated" },
+  { src: "/gallery/temple-back.png", key: "gallery.back" },
+
+  // Sanctum and shrines
+  { src: "/gallery/garbhagudi.png", key: "gallery.garbha" },
+  { src: "/gallery/temple-close.png", key: "gallery.close" },
+  { src: "/gallery/theertha-mantapa.png", key: "gallery.mantapa" },
+
+  // Deities
+  { src: "/gallery/deity_image.png", key: "gallery.deityClose" },
+  { src: "/gopalakrishna.png", key: "gallery.deity" },
+  { src: "/gallery/ganapathi.png", key: "gallery.ganapathi" },
+  { src: "/gallery/shasthara.png", key: "gallery.shasthara" },
+  { src: "/gallery/muni.png", key: "gallery.muni" },
+
+  // Murals
+  { src: "/gallery/vishwaroopa.png", key: "gallery.vishwaroopa" },
+  { src: "/gallery/vishwaroopa2.png", key: "gallery.vishwaroopa2" },
+  { src: "/gallery/krisha_flute.png", key: "gallery.krishnaMural" },
+
+  // Festival and pond
+  { src: "/gallery/Jaatre2.png", key: "gallery.jatrotsava" },
+  { src: "/gallery/Pond_Enhanced.png", key: "gallery.pond" },
+  { src: "/gallery/pond_at_night.png", key: "gallery.pondNight" },
 ];
 ---
 
@@ -28,7 +52,7 @@ const photos = [
     </header>
     <div class="masonry">
       {photos.map((photo) => (
-        <figure class={photo.span}>
+        <figure>
           <button class="shot" type="button" data-lightbox-open aria-label={messages.en[photo.key]} data-i18n={photo.key} data-i18n-attr="aria-label">
             <img src={photo.src} alt={messages.en[photo.key]} data-i18n={photo.key} data-i18n-attr="alt" loading="lazy" />
           </button>

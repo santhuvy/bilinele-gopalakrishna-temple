@@ -434,6 +434,8 @@ html.motion .band-media img { animation: ken 22s var(--ease) both; }
 }
 .festival-card:hover img { transform: scale(1.045); }
 .festival-card h2 { margin: 0; padding: 1.1rem 1.2rem 1.3rem; font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.festival-card:not(.text-only) h2:has(+ p) { padding-bottom: 0.3rem; }
+.festival-card:not(.text-only) h2 + p { margin: 0; padding: 0 1.2rem 1.3rem; color: var(--muted); font-size: 0.98rem; line-height: 1.55; }
 .festival-card.text-only {
   display: flex;
   flex-direction: column;
@@ -449,14 +451,11 @@ html.motion .band-media img { animation: ken 22s var(--ease) both; }
 
 .masonry {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
   margin-top: 2rem;
 }
 .masonry figure { margin: 0; }
-.masonry .s2 { grid-column: span 2; }
-.masonry .s3 { grid-column: span 3; }
-.masonry .s4 { grid-column: span 4; }
 .shot {
   display: block;
   width: 100%;
@@ -468,11 +467,10 @@ html.motion .band-media img { animation: ken 22s var(--ease) both; }
 }
 .shot img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   transition: transform 0.7s var(--ease);
 }
-.masonry .wide img { aspect-ratio: 4 / 5; }
 .shot:hover img { transform: scale(1.04); }
 .masonry figcaption { margin-top: 0.45rem; color: var(--muted); font-size: 0.92rem; }
 
@@ -678,13 +676,13 @@ html[lang="kn"] .hero-kicker { font-size: 0.95rem; }
   .hero h1 { font-size: clamp(3.4rem, 16vw, 4.6rem); }
   .deity-grid .deity-media { order: -1; }
   .facts, .cards, .scan-grid, .festival-grid, .know-grid { grid-template-columns: 1fr 1fr; }
-  .masonry { grid-template-columns: 1fr 1fr; }
-  .masonry figure { grid-column: span 1 !important; }
+  .masonry { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 }
 
 @media (max-width: 640px) {
   .wrap { width: min(1120px, calc(100% - 1.5rem)); }
-  .facts, .cards, .scan-grid, .festival-grid, .know-grid, .masonry { grid-template-columns: 1fr; }
+  .facts, .cards, .scan-grid, .festival-grid, .know-grid { grid-template-columns: 1fr; }
+  .masonry { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
   .hero-actions .button, .hero-actions .button-ghost { width: 100%; justify-content: center; }
   .band { min-height: 70vh; }
 }
